@@ -6,10 +6,15 @@ services:
     ports:
       - 8080:8080
 
+  web1:
+    build: .
+    ports:
+      - 8081:8080
+
   mongodb:
     image: bitnami/mongodb:latest
     ports:
-      - 27017:27017
+      - 27017
     volumes:
       - mongodb-data:/bitnami/mongodb
 
